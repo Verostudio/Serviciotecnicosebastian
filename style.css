@@ -1,0 +1,265 @@
+/* Estilos CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Puedes ajustar otras propiedades CSS aquí, como color de texto, fuente, márgenes, etc. */
+}
+.todo{
+    text-align: center;
+}
+
+.portada {
+    background-attachment: fixed;
+    background-position: center bottom;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+header {
+    background-color: #052441;
+    color: #fff;
+    padding: 0.5vw; /* Utilizando unidades relativas vw */
+    text-align: center;
+    position: relative;
+    z-index:2;
+}
+
+h1 {
+    font-size: 3.5vw; /* Utilizando unidades relativas vw */
+}
+
+h3 {
+    font-size: 2.1vw; /* Utilizando unidades relativas vw */
+}
+
+.servicio-tecnico {
+    background-color: white;
+    padding: 0.5vw; /* Utilizando unidades relativas vw */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.catalogo {
+    background-color:white;
+    padding: 0.5vw; /*4 lados del div catalogo*/
+    margin-top: 50px;
+    color: black;
+    margin-bottom: 50px; /*Añade espacio debajo del titulo en el header*/
+    max-width: 100%; /* Limitar el ancho al tamaño del viewport */
+
+}
+.catalogo text {
+    text-align: center;
+}
+/* Main */
+.contener-de-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 2.0vw; /* Utilizando unidades relativas vw */
+}
+
+.productos {
+    background-color: palevioletred ;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+.img-productos {
+    border-radius: 50%;
+    width: 100%;
+    height:100%; /* Utilizando unidades relativas vw */
+    object-fit: cover;
+    transition: all 0.5s;    
+}
+
+.img-productos img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.productos figure {
+    overflow: hidden;
+    border-radius: 50%;
+    transition: box-shadow 0.5s;
+}
+
+.productos figure:hover {
+    box-shadow: 0 0 30px rgb(49, 49, 110, 0.7); /*Utilizando unidades relativas vw*/
+    /*Ajusta la sombra al pasar el cursor*/
+}
+
+.productos:hover img {
+    transform: scale(1.1);    
+}
+.descripcion {
+    padding: 1.875vw 3.75vw; /* Utilizando unidades relativas vw */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vw; /* Utilizando unidades relativas vw */
+    text-align: center;
+}
+
+.catalogo-servicios {
+    background-color:white;
+    padding: 0.5vw; 
+    margin-top: 20px;
+    color: black;
+    margin-bottom: 10px; /*Añade espacio debajo del titulo en el header*/
+    max-width: 100%; /* Limitar el ancho al tamaño del viewport */
+    overflow-x: hidden; /* Evitar la barra de desplazamiento horizontal */
+}
+
+.catalogo-servicios {
+    text-align: center;
+}
+
+.contenedor-de-servicios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.0vw; /* Utilizando unidades relativas vw */
+}
+
+.servicios {
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+.img-servicios {
+    border-radius: 50%;
+    width: 100%;
+    height:100%; /* Utilizando unidades relativas vw */
+    object-fit: cover;
+    transition: all 0.5s;    
+}
+
+.img-servicios img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.servicios figure {
+    overflow: hidden;
+    border-radius: 50%;
+    transition: box-shadow 0.5s;
+}
+
+.servicios figure:hover {
+    box-shadow: 0 0 30px rgb(49, 49, 110, 0.7); /*Utilizando unidades relativas vw*/
+    /*Ajusta la sombra al pasar el cursor*/
+}
+
+.servicios:hover img {
+    transform: scale(1.1);    
+}
+
+.descripcion {
+    padding: 1.875vw 3.75vw; /* Utilizando unidades relativas vw */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vw; /* Utilizando unidades relativas vw */
+    text-align: center;
+    font-size: 300vw;
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(248, 246, 246), rgb(24, 64, 151), rgb(12, 12, 12));
+    margin-top: 30px;
+    z-index: 0; /* Añadimos un z-index para que esté detrás de los iconos */
+  }
+  
+  section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    z-index: 1; /* Ajustamos el z-index para que esté encima del fondo */
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, .5);
+  }
+  
+  .redes-container {
+    display: 160px;
+    justify-content: center;
+    position: relative; /* Añadimos position: relative para que los iconos estén dentro de este contenedor */
+    z-index: 2; /* Establecemos un z-index mayor para que esté encima del fondo */
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black; /* Ajustamos la opacidad del fondo */
+    color: #fff;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+  }
+  .redes-container ul:hover a{
+    filter: blur(2px);
+  }
+  .redes-container ul li a:hover{
+    transform: translateY(-3px) scale(1);
+
+    filter: none;
+  }
+  
+  /* Estilos para los iconos */
+  ul li a i {
+    font-size: 3em;
+  }
+/*Color inicial de los iconos en negro*/
+.white-icon i {
+    color:white;
+}
+
+/*Color del icono al color especifico de la red social*/
+.redes-container ul li:nth-child(1) a:hover i{
+    color: #1877f2; /*Color de Facebook*/
+}
+
+.redes-container ul li:nth-child(2) a:hover i{
+    color: #c32aa3; /*Color de Instagram*/
+}
+
+.redes-container ul li:nth-child(3) a:hover i{
+    color: #25d366; /*Color de Facebook*/
+}
